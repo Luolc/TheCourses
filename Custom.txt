@@ -1,0 +1,47 @@
+json格式说明：
+
+- course_info
+	sub_course_list_0.json: {
+		"tab_position" = 0,
+		"default_order" : [
+			{"code" : 0},
+			{"code" : 3},
+			{"code" : 5},
+			...
+		]
+	}
+	sub_course_list_1
+	sub_course_list_2
+	sub_course_list_3
+	-item
+		course_short_info_0.json: {
+			"code" : 0,
+			"category" : "subject_category",
+			"name" : "course_name",
+			"english_name" : "english_course_name",
+			"teachers" : [
+				{"name" : "teacher_name"},
+				{"name" : "teacher_name"}, 
+				...
+			]
+		}
+		...
+	-detail
+		course_detail_0.json: {
+			"course_code" : 0
+			"tags" : [
+				{"tag" : "tag_name"},
+				{"tag" : "tag_name"},
+				...
+			]
+			"characteristic" : "characteristic_name"
+			"comments" : [
+				{
+					"date" : "2015-07-26",
+					"student_code" : 1400012616,
+					"author" : "Luolc",
+					"content" : "...",
+				},
+				...
+			]
+		}

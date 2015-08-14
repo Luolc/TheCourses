@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bk_common"
+    android:orientation="vertical" >
+
+    <include layout="@layout/header_course_detail" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="64dp"
+        android:paddingStart="64dp"
+        android:paddingRight="24dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="16dp"
+        android:orientation="vertical"
+        android:background="@color/bk_primary" >
+
+        <TextView
+            android:id="@+id/tv_course_name_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:textColor="@color/tx_white"
+            android:textStyle="bold"
+            android:textSize="22sp" />
+        <TextView
+            android:id="@+id/tv_course_name_english_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:textColor="@color/tx_white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@color/bk_common"
+        android:dividerHeight="8dp"
+        android:headerDividersEnabled="false">
+    </ListView>
+
+</LinearLayout>

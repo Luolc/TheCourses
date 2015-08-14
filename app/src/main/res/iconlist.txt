@@ -1,0 +1,42 @@
+32 padding 4
+foreground FFFFFF
+background 0288D1  2 136 209
+
+地空
+Rocket
+Localization
+
+数学
+Square Root
+Calculation
+
+物理
+Explosion
+Radiation
+Magnet
+power
+
+化学
+Instrument Erlenmeyer
+
+计算机
+Device Laptop
+
+生物
+Microscope
+
+政治
+Conference Speaker
+
+体育
+Basketball
+
+语文 
+Library Books
+book
+
+英语
+Statistical Analysis
+
+军理
+gun

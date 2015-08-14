@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bk_common" >
+
+    <include layout="@layout/header_settings" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
+        android:showDividers="middle"
+        android:divider="@drawable/divider" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:onClick="onClickMonologue"
+            android:paddingLeft="16dp"
+            android:gravity="center_vertical"
+            android:text="@string/settings_monologue"
+            android:textSize="16sp"
+            android:textColor="@color/tx_primary"
+            android:background="@drawable/common_bk_item_text"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:onClick="onClickCheckVersion"
+            android:paddingLeft="16dp"
+            android:gravity="center_vertical"
+            android:text="@string/settings_check_version"
+            android:textSize="16sp"
+            android:textColor="@color/tx_primary"
+            android:background="@drawable/common_bk_item_text" />
+    </LinearLayout>
+
+</LinearLayout>

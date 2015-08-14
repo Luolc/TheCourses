@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="luolc.project.thecourses" >
+
+    <!-- permission -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- application -->
+    <application
+        android:name=".TheCoursesApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/common_launcher"
+        android:label="@string/common_app_name"
+        android:theme="@style/AppTheme" >
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="55ccbaf4e0f55a9210003e29" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+
+        <!-- SplashActivity -->
+        <activity
+            android:name=".ui.SplashActivity"
+            android:theme="@style/SplashTheme"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- CourseActivity -->
+        <activity
+            android:name=".ui.CourseActivity"
+            android:label="@string/common_app_name"
+            android:theme="@style/CourseTheme"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- CourseDetailActivity -->
+        <activity
+            android:name=".ui.CourseDetailActivity"
+            android:label="@string/course_detail_title"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- SettingsActivity -->
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:label="@string/settings_title"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" >
+        </activity>
+
+    </application>
+
+</manifest>

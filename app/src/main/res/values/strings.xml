@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- common -->
+    <string name="common_app_name">评课</string>
+    <string name="common_action_refresh">刷新</string>
+    <string name="common_action_settings">设置</string>
+    <string name="common_action_overflow">菜单</string>
+    <string name="common_divider">分隔线</string>
+    <string name="common_ic_home">主图标</string>
+    <string name="common_navigation_back">后退</string>
+
+    <string name="common_exception_none">成功</string>
+    <string name="common_exception_io">无法连接服务器，请检查网络连接</string>
+    <string name="common_exception_json">解析格式错误，请检查网络连接</string>
+    <string name="common_exception_common">未知错误</string>
+
+    <!-- Splash Activity -->
+    <string name="splash_licence">The Courses - Version 1.0.0\nPowered by Luo Liangchen, S.E.S.S. of P.K.U.</string>
+
+    <!-- Course Activity -->
+    <string name="course_tab_0">专业课</string>
+    <string name="course_tab_1">全校必修</string>
+    <string name="course_tab_2">通选课</string>
+    <string name="course_tab_3">公选课</string>
+
+    <!-- CourseListFragment -->
+    <string name="course_list_subject_category">科目分类图标</string>
+    <string name="course_list_category_biology">Biology</string>
+    <string name="course_list_category_chemistry">Chemistry</string>
+    <string name="course_list_category_chinese">Chinese</string>
+    <string name="course_list_category_cs">CS</string>
+    <string name="course_list_category_cultural">Cultural</string>
+    <string name="course_list_category_english">English</string>
+    <string name="course_list_category_history">History</string>
+    <string name="course_list_category_math">Math</string>
+    <string name="course_list_category_military">Military</string>
+    <string name="course_list_category_music">Music</string>
+    <string name="course_list_category_pe">PE</string>
+    <string name="course_list_category_physics">Physics</string>
+    <string name="course_list_category_physiology">Physiology</string>
+    <string name="course_list_category_politics">Politics</string>
+    <string name="course_list_category_psychology">Psychology</string>
+    <string name="course_list_category_sess">SESS</string>
+
+
+    <!-- Course Detail Activity -->
+    <string name="course_detail_title">课程</string>
+    <string name="course_detail_basic_info">基本信息</string>
+    <string name="course_detail_course_name">课程名称</string>
+    <string name="course_detail_teachers">任课教师</string>
+    <string name="course_detail_tags">分类标签</string>
+    <string name="course_detail_characteristic">考核特点</string>
+    <string name="course_detail_comment">往届经验</string>
+
+    <string name="course_detail_comment_default_author">匿名</string>
+
+    <string name="course_detail_add_comment_title">添加课程评价</string>
+    <string name="course_detail_add_comment_message">点击[添加]填写你的评价(这个功能尚待完善，目前还需要调用外部浏览器)。</string>
+    <string name="course_detail_add">添加</string>
+    <string name="course_detail_cancel">取消</string>
+
+    <!-- Settings Activity -->
+    <string name="settings_title">设置</string>
+    <string name="settings_monologue">作者自述</string>
+    <string name="settings_check_version">检查更新</string>
+
+    <string name="settings_no_more_latest_version">当前已是最新版本！</string>
+    <string name="settings_new_version_exist">检查到新版本</string>
+    <string name="settings_update">更新</string>
+    <string name="settings_cancel">取消</string>
+
+    <string name="settings_monologue_content">我是SESS-PKU14级的骆梁宸，这款app评课，是自己正式发布的第一个Android应用。我是非CS专业的学生，写代码于我来讲，属于纯粹的兴趣，而写一个能被别人使用的应用，也是一直以来想实现的愿望。自己并没有系统的学过如何码出漂亮的代码，这款应用的每一个功能，也都是想到了什么就去现学，再尽可能的实现出来。\n现在它还太过简陋，例如添加评论还需要外链，还不能绑定和认证学号。也许在将来的版本中能做的更好，假设作者足够勤奋的话~\n如果你对app有任何改进意见，发现了什么bug，或者你也是对应用开发感兴趣的程序员，欢迎到blog.luolc.com我的博客留言，很希望能有志同道合的小伙伴一起~\n2015-08-14</string>
+    <string name="settings_confirm">确定</string>
+
+</resources>
