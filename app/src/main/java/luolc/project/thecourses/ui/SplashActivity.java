@@ -4,17 +4,21 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.widget.TextView;
 
 import com.umeng.analytics.MobclickAgent;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
 import luolc.project.thecourses.R;
+import luolc.project.thecourses.config.Account;
 import luolc.project.thecourses.config.Constant;
+import luolc.project.thecourses.config.LocalEditor;
 import luolc.project.thecourses.util.DataUtil;
 
 
@@ -28,6 +32,9 @@ public class SplashActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        mkdirs();
+        Account.init();
+        LocalEditor.init(getApplicationContext());
         setUpVersionNote();
 
         final SplashDelayTask task = new SplashDelayTask();
@@ -66,6 +73,23 @@ public class SplashActivity extends Activity {
         String content = getString(R.string.splash_licence)
                 .replace("1.0.0", DataUtil.getVersionName(this));
         tvVersionLicence.setText(content);
+    }
+
+    private void mkdirs() {
+        try {
+            File file = new File(Environment.getExternalStorageDirectory()
+                    + "/" + Constant.DIR_APP_NAME + "/");
+            if (!file.exists()) {
+                file.mkdirs();
+            } else {
+                if (!file.isDirectory()) {
+                    file.delete();
+                    file.mkdirs();
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     //disable the back button
