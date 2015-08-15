@@ -19,9 +19,9 @@ import luolc.project.thecourses.R;
 import luolc.project.thecourses.adapter.TabAdapter;
 import luolc.project.thecourses.bean.VersionBean;
 import luolc.project.thecourses.biz.AppBiz;
-import luolc.project.thecourses.config.Constant;
 import luolc.project.thecourses.util.BizUtil;
 import luolc.project.thecourses.util.DataUtil;
+import luolc.project.thecourses.util.ResourceUtil;
 
 /**
  * Created by Luo Liangchen on 2015/7/25.
@@ -88,8 +88,8 @@ public class CourseActivity extends FragmentActivity {
                             .setPositiveButton(R.string.settings_update, new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    String url = Constant.URL_BASE_DOWNLOAD_APK
-                                            + versionBean.getVersion_name() + ".apk";
+                                    String url = ResourceUtil
+                                            .getApkDownloadUrl(versionBean.getVersion_name());
                                     Uri uri = Uri.parse(url);
                                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                                     mContext.startActivity(intent);
