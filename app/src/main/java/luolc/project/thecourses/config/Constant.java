@@ -27,6 +27,17 @@ public interface Constant {
     String KEY_COURSE_NAME_ENGLISH = "key_course_name_english";
     String KEY_COURSE_TEACHERS = "key_course_teachers";
 
+    String KEY_DATA_ID = "key_data_id";
+    String KEY_DATA_PASSWORD = "key_data_password";
+    String KEY_DATA_NAME = "key_data_name";
+    String KEY_DATA_NICK_NAME = "key_data_nick_name";
+    String KEY_DATA_MAJOR = "key_data_major";
+
+    /**
+     * File Dir
+     */
+    String DIR_APP_NAME = "the-courses";
+
     /**
      * String
      */
@@ -35,6 +46,9 @@ public interface Constant {
     String[]COURSE_TAB_TITLE =
             new String[]{"专业课", "全校必修", "通选课", "公选课"};
 
+    /**
+     * Url
+     */
     String URL_BASE_COURSE_LIST =
             "http://thecourses.sinaapp.com/appdata/course_info/sub_course_list_";
     String URL_BASE_COURSE_INFO =
