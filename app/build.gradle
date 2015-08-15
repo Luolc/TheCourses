@@ -25,7 +25,10 @@ android {
 
     signingConfigs {
         debug {
-            // No debug config
+            storeFile file("luolcproject.keystore")
+            storePassword "lolowitty"
+            keyAlias "luolcproject"
+            keyPassword "lolowitty"
         }
         release {
             storeFile file("luolcproject.keystore")
