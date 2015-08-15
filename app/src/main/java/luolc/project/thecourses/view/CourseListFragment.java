@@ -42,6 +42,8 @@ public class CourseListFragment extends Fragment {
     private CourseListViewAdapter adapter;
     private PtrClassicFrameLayout ptr;
 
+    private LoadCourseInfoTask loadTask;
+
     private int position;
     private static final String ARGUMENT_POSITION = "position";
 
@@ -84,6 +86,14 @@ public class CourseListFragment extends Fragment {
         setUpAdapter();
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+        if (loadTask != null && loadTask.getStatus() == AsyncTask.Status.RUNNING) {
+            loadTask.cancel(true);
+        }
+    }
+
     private void setUpListView(View view) {
         lvCourse = (ListView) view.findViewById(R.id.lv_course);
 
@@ -119,7 +129,8 @@ public class CourseListFragment extends Fragment {
         ptr.setPtrHandler(new PtrDefaultHandler() {
             @Override
             public void onRefreshBegin(PtrFrameLayout ptrFrameLayout) {
-                new LoadCourseInfoTask().execute(position);
+                loadTask = new LoadCourseInfoTask();
+                loadTask.execute(position);
             }
         });
         ptr.postDelayed(new Runnable() {
@@ -128,7 +139,6 @@ public class CourseListFragment extends Fragment {
                 ptr.autoRefresh();
             }
         }, 0);
-       // ptr.autoRefresh();
         ptr.setLoadingMinTime(Constant.COURSE_REFRESH_MIN_TIME);
         ptr.setPinContent(true);
 
@@ -153,6 +163,7 @@ public class CourseListFragment extends Fragment {
 
     class LoadCourseInfoTask extends AsyncTask<Integer, Void, String> {
         @Override
+        @SuppressWarnings("unchecked")
         protected String doInBackground(Integer... params) {
             StringBuffer status = new StringBuffer("");
             courseBeans = BizUtil.get(getActivity(), new CourseBiz(CourseBiz.COURSE_BASIC),
@@ -160,10 +171,12 @@ public class CourseListFragment extends Fragment {
             Collections.sort(courseBeans, new SortMode(SortMode.NAME));
             return status.toString();
         }
+
         @Override
         protected void onPostExecute(String status) {
             super.onPostExecute(status);
-            if (status.equals(getString(R.string.common_exception_none))) {
+            String status_common = getString(R.string.common_exception_none);
+            if (status.equals(status_common)) {
                 adapter.reset(courseBeans);
                 adapter.notifyDataSetChanged();
             } else {

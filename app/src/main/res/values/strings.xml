@@ -16,7 +16,7 @@
     <string name="common_exception_common">未知错误</string>
 
     <!-- Splash Activity -->
-    <string name="splash_licence">The Courses - Version 1.0.0\nPowered by Luo Liangchen, S.E.S.S. of P.K.U.</string>
+    <string name="splash_licence">The Courses - Version 1.0.0\nPowered by Liangchen Luo, S.E.S.S. of P.K.U.</string>
 
     <!-- Course Activity -->
     <string name="course_tab_0">专业课</string>

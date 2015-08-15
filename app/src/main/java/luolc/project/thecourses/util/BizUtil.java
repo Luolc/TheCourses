@@ -26,7 +26,7 @@ public class BizUtil {
             status.append(context.getString(R.string.common_exception_json));
         } catch (Exception e) {
             e.printStackTrace();
-            status.append(context.getString(R.string.common_exception_common) + "," + e.getMessage());
+            status.append(e.getMessage());
         }
         return bean;
     }

@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.View;
 
 import com.umeng.analytics.MobclickAgent;
@@ -59,8 +58,6 @@ public class CourseActivity extends FragmentActivity {
     }
 
     private void setUpViewPager() {
-        Log.i(TAG, "-->set up viewPager");
-
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mTabPageIndicator = (TabPageIndicator) findViewById(R.id.indicator);
         mTabAdapter = new TabAdapter(getSupportFragmentManager());
