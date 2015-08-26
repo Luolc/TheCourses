@@ -1,8 +1,11 @@
-package luolc.project.thecourses.config;
+package luolc.project.thecourses.config.Account;
 
 import android.os.Environment;
 
 import java.io.File;
+
+import luolc.project.thecourses.config.Constant;
+import luolc.project.thecourses.config.LocalEditor;
 
 /**
  * Created by Luo Liangchen on 2015/8/15.
@@ -15,15 +18,7 @@ public class Account {
     private static String nickName;
     private static String major;
 
-    public static void init() {
-        id = "";
-        password = "";
-        name = "";
-        nickName = "";
-        major = "";
-    }
-
-    public static void getData() {
+    public static void getCurrentAccount() {
         id = LocalEditor.getString(Constant.KEY_DATA_ID);
         password = LocalEditor.getString(Constant.KEY_DATA_PASSWORD);
         name = LocalEditor.getString(Constant.KEY_DATA_NAME);

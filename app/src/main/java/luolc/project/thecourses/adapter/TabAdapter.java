@@ -1,6 +1,7 @@
 package luolc.project.thecourses.adapter;
 
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -13,8 +14,11 @@ import luolc.project.thecourses.view.CourseListFragment;
  */
 public class TabAdapter extends FragmentPagerAdapter {
 
-    public TabAdapter(FragmentManager manager) {
+    private Context context;
+
+    public TabAdapter(FragmentManager manager, Context context) {
         super(manager);
+        this.context = context;
     }
 
     @Override
@@ -33,7 +37,8 @@ public class TabAdapter extends FragmentPagerAdapter {
     @Override
     public CharSequence getPageTitle(int position) {
         if (position < Constant.COURSE_TAB_SIZE) {
-            return Constant.COURSE_TAB_TITLE[position];
+            return context.getString(Constant.COURSE_TAB_TITLE_ID[position]);
+            //return Constant.COURSE_TAB_TITLE[position];
         }
         return null;
     }

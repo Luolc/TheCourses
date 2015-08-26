@@ -5,7 +5,7 @@ import android.os.Environment;
 
 import java.io.File;
 
-import luolc.project.thecourses.config.Account;
+import luolc.project.thecourses.config.Account.Account;
 import luolc.project.thecourses.config.Constant;
 import luolc.project.thecourses.config.LocalEditor;
 import luolc.project.thecourses.util.DisplayUtil;
@@ -20,7 +20,6 @@ public class TheCoursesApplication extends Application {
         super.onCreate();
         mkdirs();
         LocalEditor.init(getApplicationContext());
-        Account.init();
         Account.clear();
         DisplayUtil.init(getApplicationContext());
     }

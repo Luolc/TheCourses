@@ -60,7 +60,7 @@ public class CourseActivity extends FragmentActivity {
     private void setUpViewPager() {
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mTabPageIndicator = (TabPageIndicator) findViewById(R.id.indicator);
-        mTabAdapter = new TabAdapter(getSupportFragmentManager());
+        mTabAdapter = new TabAdapter(getSupportFragmentManager(), this);
         mViewPager.setAdapter(mTabAdapter);
         mTabPageIndicator.setViewPager(mViewPager, 0);
     }
