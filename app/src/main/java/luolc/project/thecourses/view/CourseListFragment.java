@@ -175,12 +175,16 @@ public class CourseListFragment extends Fragment {
         @Override
         protected void onPostExecute(String status) {
             super.onPostExecute(status);
-            String status_common = getString(R.string.common_exception_none);
-            if (status.equals(status_common)) {
-                adapter.reset(courseBeans);
-                adapter.notifyDataSetChanged();
-            } else {
-                Toast.makeText(getActivity(), status, Toast.LENGTH_SHORT).show();
+            try {
+                String status_common = getString(R.string.common_exception_none);
+                if (status.equals(status_common)) {
+                    adapter.reset(courseBeans);
+                    adapter.notifyDataSetChanged();
+                } else {
+                    Toast.makeText(getActivity(), status, Toast.LENGTH_SHORT).show();
+                }
+            } catch(Exception e) {
+                e.printStackTrace();
             }
             ptr.refreshComplete();
         }
