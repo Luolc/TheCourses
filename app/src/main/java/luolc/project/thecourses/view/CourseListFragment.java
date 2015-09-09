@@ -163,21 +163,21 @@ public class CourseListFragment extends Fragment {
 
     class LoadCourseInfoTask extends AsyncTask<Integer, Void, String> {
         @Override
-        @SuppressWarnings("unchecked")
         protected String doInBackground(Integer... params) {
             StringBuffer status = new StringBuffer("");
             courseBeans = BizUtil.get(getActivity(), new CourseBiz(CourseBiz.COURSE_BASIC),
                     status, params[0]);
-            Collections.sort(courseBeans, new SortMode(SortMode.NAME));
             return status.toString();
         }
 
         @Override
+        @SuppressWarnings("unchecked")
         protected void onPostExecute(String status) {
             super.onPostExecute(status);
             try {
                 String status_common = getString(R.string.common_exception_none);
                 if (status.equals(status_common)) {
+                    Collections.sort(courseBeans, new SortMode(SortMode.NAME));
                     adapter.reset(courseBeans);
                     adapter.notifyDataSetChanged();
                 } else {
